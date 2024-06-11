@@ -23,15 +23,21 @@ function App() {
   console.log(todos)
 
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {/* Gunakan method map di sini */}
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
-       <Todos todos={todos}/> {/* Menampilkan component Todos */}
+    <div style={styles.container}>
+      <h1 style={styles.title}>My Todo List</h1>
+      <Todos todos={todos} />
     </div>
   )
+}
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
 }
 
 export default App;
