@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Todos from './components/Todos';  // Lalukan Import
 
 function App() {
   const [todos, setTodos] = useState([
@@ -28,6 +29,7 @@ function App() {
       {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>
       })}
+       <Todos todos={todos}/> {/* Menampilkan component Todos */}
     </div>
   )
 }
